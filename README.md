@@ -1,9 +1,11 @@
 # Sales Process — sito
 
-Rifacimento della home di [salesprocess.it](https://salesprocess.it): **stessa
-struttura e stessi testi dell'originale**, linguaggio visivo più moderno e meno
-"agenzia di comunicazione". Bianco e nero come base, l'arancio del marchio
-`#FF8200` riservato agli accenti.
+Rifacimento di [salesprocess.it](https://salesprocess.it): **stessa struttura e
+stessi testi dell'originale**, linguaggio visivo più moderno e meno "agenzia di
+comunicazione". Bianco e nero come base, l'arancio del marchio `#FF8200`
+riservato agli accenti.
+
+Sei pagine: home, DNA, Prodotti, Team, Carriera, Eventi.
 
 Sito statico: HTML, CSS e JavaScript scritti a mano, nessun framework, nessun
 passaggio di build per pubblicarlo.
@@ -20,15 +22,24 @@ Serve un server locale perché font, immagini e video sono file separati.
 ## Struttura
 
 ```
-index.html                 pagina unica, tutte le sezioni
+index.html                 home
+dna.html                   origine, mission, vision, i 10 comandamenti
+prodotti.html              le 4 risorse e il software All in One
+team.html                  cultura aziendale e le 13 persone del team
+carriera.html              aree di inserimento e candidature
+eventi.html                prossimi appuntamenti
 assets/css/style.css       token, componenti, responsive
 assets/js/app.js           testata, menu, comparse, marquee, video
 assets/fonts/              Red Hat Display variabile (SIL OFL)
 assets/img/                logo, illustrazioni dei reparti, loghi clienti
 assets/video/              hero e sezione metodo, in più risoluzioni
-tools/build-singlefile.py  genera la versione a file singolo
+tools/build-singlefile.py  genera le versioni a file singolo
 dist/                      output del comando qui sopra
 ```
+
+Header, menu e footer sono ripetuti in ogni file: il sito non ha un motore di
+template, quindi una modifica a quei blocchi va riportata su tutte e sei le
+pagine.
 
 ## Corrispondenza con l'originale
 
@@ -46,8 +57,18 @@ lettera:
 | Team | *Dietro ogni nostro successo…* con rimando alla pagina Team |
 | Footer | *Hai un progetto? Vieni a prendere un caffè con noi!*, sedi, link utili, contatti, social |
 
-Le voci di menu (DNA, Prodotti, Team, Carriera, Eventi), la CTA *Candida la tua
-azienda* e tutti i recapiti puntano alle URL reali del sito.
+Le altre pagine seguono lo stesso criterio:
+
+| Pagina | Contenuto ripreso dall'originale |
+|---|---|
+| **DNA** | *"Dal 2020 aiutiamo gli Imprenditori italiani…"*, la nascita da 2 imprenditori, mission, vision e i **10 comandamenti** con i testi integrali |
+| **Prodotti** | *Le nostre Risorse — la tua scala verso il successo*: Progetto 360, Dashboard dell'imprenditore, Il nostro libro, Fatturato Box, più **Sales Process All in One** con le sei funzioni elencate |
+| **Team** | *Perché facciamo ciò che facciamo*, i tre blocchi di cultura aziendale e le **13 persone** con ruolo e biografia |
+| **Carriera** | *Benvenuto nella nostra sezione Carriera* |
+| **Eventi** | *I nostri eventi* e il webinar *"I numeri non mentono, ma non vendono"* del 9 dicembre |
+
+La CTA *Candida la tua azienda* punta al quiz reale, i recapiti e i social alle
+URL originali; i link fra pagine sono locali.
 
 ## Scelte di progetto
 
@@ -97,12 +118,15 @@ ffmpeg -ss 50 -t 16 -i sorgente.mov -an -map 0:v:0 \
   -pix_fmt yuv420p -movflags +faststart assets/video/hero-1600.mp4
 ```
 
-## Versione a file singolo
+## Versioni a file singolo
 
 ```bash
-python3 tools/build-singlefile.py
-# -> dist/salesprocess.html  (~3,9 MB, si apre con doppio clic)
+python3 tools/build-singlefile.py          # -> dist/salesprocess.html (~3,9 MB)
+python3 tools/build-singlefile.py --site   # -> dist/salesprocess-sito.html (~5,4 MB)
 ```
+
+La prima contiene la sola home; la seconda tutte e sei le pagine, navigabili
+dentro un unico documento tramite ancore.
 
 CSS, JavaScript, font, immagini e video finiscono dentro il documento: nessuna
 richiesta a domini esterni, comodo da mandare via mail o da pubblicare come
@@ -113,10 +137,19 @@ trasformato in blob al caricamento; e viene incorporato solo il VP9/WebM
 
 ## Da sistemare prima della pubblicazione
 
-- **Video delle testimonianze** — le cinque schede (Roberto Straniero, Claudia
-  Mabiglia, Alessandro Scuderi, Alessandro Cianflone, Claudia Petrazzuolo)
-  rimandano al canale YouTube. Vanno collegate ai singoli video: sul sito
-  attuale sono caricati su Vimeo.
+- **Video delle testimonianze** — le schede (cinque in home ed eventi, otto in
+  prodotti) rimandano al canale YouTube. Vanno collegate ai singoli video: sul
+  sito attuale sono caricati su Vimeo.
+- **Testi aggiunti** — tre punti non esistono sull'originale e sono stati scritti
+  per non lasciare sezioni vuote: la descrizione del webinar in *Eventi*, il
+  blocco *"Quattro reparti, una sola squadra"* con le aree di inserimento in
+  *Carriera* (la pagina originale contiene solo il titolo di benvenuto) e le
+  frasi di apertura sotto i titoli di *Prodotti*, *Team* ed *Eventi*. Da
+  rivedere o sostituire.
+- **Foto del team** — la pagina originale non pubblica ritratti, quindi le 13
+  schede sono solo tipografiche. Se ci sono le foto, si inseriscono nelle card.
+- **Posizioni aperte** — la pagina Carriera non ha annunci: vanno aggiunti quando
+  ci sono, oppure va collegato il gestionale che usate.
 - **Logo** — l'unica versione disponibile online è un AVIF da 293×68 px,
   ricompresso anche in PNG. Per gli schermi ad alta densità serve il file
   originale.
@@ -124,8 +157,6 @@ trasformato in blob al caricamento; e viene incorporato solo il VP9/WebM
   nell'attributo `alt`. Vanno aggiunti per accessibilità e SEO.
 - **Analytics e banner cookie** — non presenti, da aggiungere secondo lo
   strumento in uso (il sito attuale usa iubenda).
-- **Pagine interne** — qui è rifatta solo la home; DNA, Prodotti, Team,
-  Carriera ed Eventi puntano ancora al sito esistente.
 
 ## Licenza dei font
 

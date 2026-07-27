@@ -17,15 +17,12 @@
   /* ── 2. TESTATA: fondo pieno appena si lascia l'hero ─────────────── */
 
   var head = document.getElementById("head");
+  var banner = document.querySelector(".hero, .phero");
 
-  if (head && "IntersectionObserver" in window) {
-    var sentinel = document.createElement("div");
-    sentinel.style.cssText = "position:absolute;top:0;left:0;width:1px;height:90vh;pointer-events:none;";
-    document.body.prepend(sentinel);
-
+  if (head && banner && "IntersectionObserver" in window) {
     new IntersectionObserver(function (entries) {
       head.classList.toggle("is-stuck", !entries[0].isIntersecting);
-    }, { threshold: 0 }).observe(sentinel);
+    }, { rootMargin: "-72px 0px 0px 0px", threshold: 0 }).observe(banner);
   }
 
   /* ── 3. MENU A TUTTO SCHERMO ─────────────────────────────────────── */
@@ -121,8 +118,9 @@
     }, { threshold: 0.15 }).observe(video);
   }
 
-  govern(document.getElementById("heroVideo"), true);
-  govern(document.getElementById("methodVideo"), false);
+  document.querySelectorAll("video").forEach(function (v) {
+    govern(v, v.hasAttribute("autoplay"));
+  });
 
   document.addEventListener("visibilitychange", function () {
     document.querySelectorAll("video").forEach(function (v) {
