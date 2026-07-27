@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sales Process — Costruiamo il tuo processo di vendita da zero</title>
+<meta name="description" content="Advertising, marketing, selezione dei commerciali e formazione della rete vendita in un'unica agenzia. Un processo di vendita misurabile, operativo in 6 mesi o meno.">
+<meta name="theme-color" content="#0E0D0C">
+<meta property="og:title" content="Sales Process — Costruiamo il tuo processo di vendita da zero">
+<meta property="og:description" content="Quattro reparti dentro un'unica agenzia, al lavoro sullo stesso processo di vendita. Operativo in 6 mesi o meno.">
+<meta property="og:locale" content="it_IT">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Salta al contenuto</a>
+
+<header class="masthead" id="top">
+  <div class="masthead__inner">
+    <a class="wordmark" href="#top" aria-label="Sales Process, torna all'inizio">
+      <span class="wordmark__mark" aria-hidden="true"></span>
+      <span class="wordmark__text">Sales<span class="wordmark__thin">Process</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Navigazione principale">
+      <a href="#problema">Il problema</a>
+      <a href="#sistema">Il sistema</a>
+      <a href="#percorso">Percorso</a>
+      <a href="#numeri">Numeri</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="masthead__actions">
+      <button class="theme-toggle" type="button" id="themeToggle" aria-label="Cambia tema chiaro/scuro">
+        <span class="theme-toggle__dot" aria-hidden="true"></span>
+        <span class="theme-toggle__label" data-theme-label>Scuro</span>
+      </button>
+      <a class="btn btn--solid btn--sm" href="https://go.salesprocess.it/prenota-call">Prenota una call</a>
+      <button class="burger" type="button" id="burger" aria-expanded="false" aria-controls="mobileNav" aria-label="Apri il menu">
+        <span aria-hidden="true"></span><span aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <a href="#problema">Il problema</a>
+    <a href="#sistema">Il sistema</a>
+    <a href="#percorso">Percorso</a>
+    <a href="#numeri">Numeri</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn--solid" href="https://go.salesprocess.it/prenota-call">Prenota una call</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ────────────────────────────────── HERO ── -->
+  <section class="hero">
+    <div class="hero__grid shell">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="eyebrow__tick" aria-hidden="true"></span>Advertising · Marketing · Recruiting · Formazione</p>
+        <h1 class="hero__title">
+          Costruiamo<br>il tuo processo<br>di vendita.<br><em>Da zero.</em>
+        </h1>
+        <p class="hero__lead">
+          Quattro reparti dentro un'unica agenzia, al lavoro sullo stesso obiettivo:
+          trasformare la tua vendita da improvvisazione a sistema misurabile.
+          Operativo in 6 mesi o meno.
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--solid" href="https://go.salesprocess.it/prenota-call">Prenota una call gratuita</a>
+          <a class="btn btn--ghost" href="#sistema">Come lavoriamo</a>
+        </div>
+        <p class="hero__note">
+          Analisi iniziale senza impegno. Se il tuo processo non è il collo di bottiglia, te lo diciamo subito.
+        </p>
+      </div>
+
+      <figure class="pipeline" aria-labelledby="pipelineCap">
+        <figcaption class="pipeline__head">
+          <span class="mono-tag">Flusso · simulazione</span>
+          <span class="pipeline__legend">
+            <i class="dot dot--grey" aria-hidden="true"></i> disperso
+            <i class="dot dot--accent" aria-hidden="true"></i> chiuso
+          </span>
+        </figcaption>
+        <canvas id="pipelineCanvas" width="640" height="420" role="img"
+                aria-label="Animazione di un flusso di contatti che attraversa quattro fasi del processo di vendita: contatto, appuntamento, trattativa, cliente."></canvas>
+        <div class="pipeline__stages" id="pipelineStages" aria-hidden="true">
+          <div class="stage"><span class="stage__name">Contatto</span><span class="stage__val" data-stage="0">0</span></div>
+          <div class="stage"><span class="stage__name">Appuntamento</span><span class="stage__val" data-stage="1">0</span></div>
+          <div class="stage"><span class="stage__name">Trattativa</span><span class="stage__val" data-stage="2">0</span></div>
+          <div class="stage stage--win"><span class="stage__name">Cliente</span><span class="stage__val" data-stage="3">0</span></div>
+        </div>
+        <p id="pipelineCap" class="pipeline__cap">
+          Ogni fase ha un numero. Quando manca il numero, manca il processo.
+        </p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────── FATTI ── -->
+  <section class="facts" aria-label="Come lavoriamo, in sintesi">
+    <div class="shell facts__grid">
+      <div class="fact">
+        <span class="fact__val">4</span>
+        <span class="fact__lab">reparti in una sola agenzia,<br>non quattro fornitori da coordinare</span>
+      </div>
+      <div class="fact">
+        <span class="fact__val">6</span>
+        <span class="fact__lab">i mesi entro cui il processo<br>gira anche senza di noi</span>
+      </div>
+      <div class="fact">
+        <span class="fact__val">1&ndash;10<span class="fact__unit">M&euro;</span></span>
+        <span class="fact__lab">il fatturato delle aziende<br>con cui lavoriamo meglio</span>
+      </div>
+      <div class="fact">
+        <span class="fact__val">0</span>
+        <span class="fact__lab">attività che portiamo avanti<br>senza un dato che la misuri</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────── PROBLEMA ── -->
+  <section class="band" id="problema">
+    <div class="shell">
+      <div class="band__head">
+        <p class="mono-tag">Il punto di partenza</p>
+        <h2 class="band__title">Non hai un problema di vendite.<br>Hai un problema di processo.</h2>
+        <p class="band__lead">
+          Le aziende che ci chiamano vendono già. Il problema è che non sanno dire <em>perché</em> vendono,
+          e quindi non sanno cosa ripetere il mese dopo.
+        </p>
+      </div>
+
+      <ul class="symptoms">
+        <li class="symptom">
+          <span class="mono-tag mono-tag--dim">Sintomo</span>
+          <h3>I contatti arrivano, i clienti no</h3>
+          <p>Nessuno in azienda sa dire quanti contatti servono per chiudere un cliente. Il marketing e la vendita si accusano a vicenda, e nessuno dei due ha i numeri per avere ragione.</p>
+        </li>
+        <li class="symptom">
+          <span class="mono-tag mono-tag--dim">Sintomo</span>
+          <h3>Il fatturato dipende da due persone</h3>
+          <p>Tu e il tuo commerciale migliore. Se uno dei due si ferma, si ferma l'azienda. Ogni nuovo venditore inserito impiega mesi e quasi sempre non arriva agli stessi risultati.</p>
+        </li>
+        <li class="symptom">
+          <span class="mono-tag mono-tag--dim">Sintomo</span>
+          <h3>Ogni mese riparte da zero</h3>
+          <p>Nessuna previsione a 90 giorni, nessuna pipeline leggibile. Le decisioni sull'anno prossimo si prendono guardando l'estratto conto invece dei tassi di conversione.</p>
+        </li>
+      </ul>
+
+      <div class="shift">
+        <div class="shift__head">
+          <span class="mono-tag">Prima / dopo</span>
+          <h3 class="shift__title">Cosa cambia, concretamente</h3>
+        </div>
+        <div class="shift__table" role="table" aria-label="Confronto tra vendita senza processo e vendita con processo">
+          <div class="shift__row shift__row--head" role="row">
+            <span role="columnheader">Area</span>
+            <span role="columnheader">Senza processo</span>
+            <span role="columnheader" class="is-accent">Con il processo</span>
+          </div>
+          <div class="shift__row" role="row">
+            <span role="cell" class="shift__area">Generazione contatti</span>
+            <span role="cell">Passaparola e picchi casuali</span>
+            <span role="cell" class="is-accent">Campagne con un costo per appuntamento noto</span>
+          </div>
+          <div class="shift__row" role="row">
+            <span role="cell" class="shift__area">Qualifica</span>
+            <span role="cell">A sensazione, durante la chiamata</span>
+            <span role="cell" class="is-accent">Criteri scritti, filtro prima dell'appuntamento</span>
+          </div>
+          <div class="shift__row" role="row">
+            <span role="cell" class="shift__area">Trattativa</span>
+            <span role="cell">Ogni venditore fa a modo suo</span>
+            <span role="cell" class="is-accent">Stesse fasi, stessi materiali, stesse risposte</span>
+          </div>
+          <div class="shift__row" role="row">
+            <span role="cell" class="shift__area">Persone</span>
+            <span role="cell">Si assume di fretta, quando serve</span>
+            <span role="cell" class="is-accent">Selezione continua e inserimento in 30 giorni</span>
+          </div>
+          <div class="shift__row" role="row">
+            <span role="cell" class="shift__area">Misura</span>
+            <span role="cell">Il fatturato a fine mese</span>
+            <span role="cell" class="is-accent">Conversione per fase, letta ogni settimana</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────── SISTEMA ── -->
+  <section class="band band--inverse" id="sistema">
+    <div class="shell">
+      <div class="band__head">
+        <p class="mono-tag">Il sistema</p>
+        <h2 class="band__title">Quattro reparti.<br>Un solo processo.</h2>
+        <p class="band__lead">
+          Le agenzie ti vendono un pezzo: le campagne, oppure la formazione, oppure la selezione.
+          Poi i pezzi non si parlano. Noi teniamo insieme i quattro reparti che decidono se vendi,
+          e li facciamo rispondere agli stessi numeri.
+        </p>
+      </div>
+
+      <div class="depts">
+        <article class="dept">
+          <header class="dept__head">
+            <span class="mono-tag">ADV</span>
+            <h3>Advertising</h3>
+          </header>
+          <p>Gestiamo le campagne su Meta, Google e LinkedIn con un solo indicatore in cima al report: quanto costa un appuntamento realmente utile. Tutto il resto è vanità.</p>
+          <ul class="dept__list">
+            <li>Piano media e budget per canale</li>
+            <li>Creatività testate a rotazione</li>
+            <li>Report settimanale sul costo per appuntamento</li>
+          </ul>
+        </article>
+
+        <article class="dept">
+          <header class="dept__head">
+            <span class="mono-tag">MKT</span>
+            <h3>Marketing</h3>
+          </header>
+          <p>Trasformiamo il traffico in appuntamenti: offerta, pagine, contenuti e sequenze di recupero scritte per il tuo mercato, non per un settore generico.</p>
+          <ul class="dept__list">
+            <li>Costruzione dell'offerta e del posizionamento</li>
+            <li>Pagine e funnel di acquisizione</li>
+            <li>Follow-up automatico sui contatti freddi</li>
+          </ul>
+        </article>
+
+        <article class="dept">
+          <header class="dept__head">
+            <span class="mono-tag">REC</span>
+            <h3>Recruiting</h3>
+          </header>
+          <p>Selezioniamo i commerciali al posto tuo: annunci, screening, colloqui e prova sul campo. Arrivano alla tua scrivania solo le persone che hanno già superato il filtro.</p>
+          <ul class="dept__list">
+            <li>Annuncio e raccolta candidature</li>
+            <li>Colloqui strutturati e prova pratica</li>
+            <li>Inserimento guidato nei primi 30 giorni</li>
+          </ul>
+        </article>
+
+        <article class="dept">
+          <header class="dept__head">
+            <span class="mono-tag">FRM</span>
+            <h3>Formazione</h3>
+          </header>
+          <p>Formiamo la rete vendita sul <em>tuo</em> processo: script, gestione delle obiezioni, affiancamento in chiamata e revisione delle trattative registrate.</p>
+          <ul class="dept__list">
+            <li>Script e materiali di trattativa</li>
+            <li>Affiancamento sulle chiamate reali</li>
+            <li>Revisione settimanale delle registrazioni</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="depts__foot">
+        <span class="mono-tag mono-tag--dim">Nota</span>
+        Un reparto da solo sposta poco. È la somma che produce un processo che regge senza di te.
+      </p>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────── PERCORSO ── -->
+  <section class="band" id="percorso">
+    <div class="shell">
+      <div class="band__head">
+        <p class="mono-tag">Il percorso</p>
+        <h2 class="band__title">Sei mesi, in ordine.</h2>
+        <p class="band__lead">
+          Le fasi si susseguono per un motivo: inserire commerciali prima di avere un flusso di appuntamenti
+          significa pagare persone che aspettano. Ecco come procediamo.
+        </p>
+      </div>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step__no">01</span>
+          <div class="step__body">
+            <span class="mono-tag mono-tag--dim">Settimana 1&ndash;2</span>
+            <h3>Diagnosi</h3>
+            <p>Analizziamo i numeri che hai già, ascoltiamo le chiamate registrate e disegniamo la mappa del processo attuale. Alla fine sai esattamente dove perdi le opportunità.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__no">02</span>
+          <div class="step__body">
+            <span class="mono-tag mono-tag--dim">Mese 1</span>
+            <h3>Progetto</h3>
+            <p>Definiamo offerta, cliente target e struttura del processo: fasi, criteri di passaggio, materiali necessari e responsabilità di ciascuno.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__no">03</span>
+          <div class="step__body">
+            <span class="mono-tag mono-tag--dim">Mese 2</span>
+            <h3>Acquisizione</h3>
+            <p>Campagne online, prime pagine pubblicate, primo flusso di appuntamenti misurato. Da qui in avanti ogni contatto ha una fonte e un costo.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__no">04</span>
+          <div class="step__body">
+            <span class="mono-tag mono-tag--dim">Mese 3</span>
+            <h3>Persone</h3>
+            <p>Selezione e inserimento dei commerciali sul flusso che nel frattempo si è stabilizzato. Chi entra trova appuntamenti già in agenda.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__no">05</span>
+          <div class="step__body">
+            <span class="mono-tag mono-tag--dim">Mese 4&ndash;5</span>
+            <h3>Formazione</h3>
+            <p>Script, affiancamento sulle trattative vere e revisione delle registrazioni. Il tasso di chiusura smette di dipendere dal talento del singolo.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step__no">06</span>
+          <div class="step__body">
+            <span class="mono-tag mono-tag--dim">Mese 6</span>
+            <h3>Sistema</h3>
+            <p>Consegniamo un processo documentato, con i numeri sotto controllo e le persone formate per mandarlo avanti. Restiamo solo se serve.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────── SIMULATORE ── -->
+  <section class="band band--soft" id="numeri">
+    <div class="shell">
+      <div class="band__head">
+        <p class="mono-tag">I tuoi numeri</p>
+        <h2 class="band__title">Quanto ti costa<br>il processo che hai adesso?</h2>
+        <p class="band__lead">
+          Muovi i tre valori che descrivono la tua vendita di oggi. A destra vedi cosa succede
+          se il processo migliora la qualifica dei contatti e la chiusura delle trattative.
+        </p>
+      </div>
+
+      <div class="sim">
+        <form class="sim__inputs" id="simForm" aria-label="Simulatore di ricavi">
+          <div class="field">
+            <label for="inAppt">Appuntamenti fissati al mese</label>
+            <output class="field__out" id="outAppt" for="inAppt">40</output>
+            <input type="range" id="inAppt" min="5" max="200" step="5" value="40">
+            <div class="field__scale"><span>5</span><span>200</span></div>
+          </div>
+
+          <div class="field">
+            <label for="inClose">Tasso di chiusura</label>
+            <output class="field__out" id="outClose" for="inClose">20%</output>
+            <input type="range" id="inClose" min="2" max="60" step="1" value="20">
+            <div class="field__scale"><span>2%</span><span>60%</span></div>
+          </div>
+
+          <div class="field">
+            <label for="inValue">Valore medio di un cliente</label>
+            <output class="field__out" id="outValue" for="inValue">&euro; 4.000</output>
+            <input type="range" id="inValue" min="500" max="50000" step="500" value="4000">
+            <div class="field__scale"><span>&euro; 500</span><span>&euro; 50.000</span></div>
+          </div>
+        </form>
+
+        <div class="sim__out" aria-live="polite">
+          <div class="sim__row">
+            <div class="sim__cell">
+              <span class="mono-tag mono-tag--dim">Oggi &middot; su base annua</span>
+              <span class="sim__num" id="outNow">&euro; 384.000</span>
+              <span class="sim__sub"><span id="outNowCli">96</span> clienti l'anno</span>
+            </div>
+            <div class="sim__cell sim__cell--win">
+              <span class="mono-tag">Con il processo &middot; su base annua</span>
+              <span class="sim__num sim__num--accent" id="outNew">&euro; 672.000</span>
+              <span class="sim__sub"><span id="outNewCli">168</span> clienti l'anno</span>
+            </div>
+          </div>
+
+          <div class="sim__bars" aria-hidden="true">
+            <div class="bar"><span class="bar__fill bar__fill--now" id="barNow"></span></div>
+            <div class="bar"><span class="bar__fill bar__fill--new" id="barNew"></span></div>
+          </div>
+
+          <p class="sim__delta">
+            Differenza annua: <strong id="outDelta">&euro; 288.000</strong>
+          </p>
+          <p class="sim__disc">
+            Simulazione basata su due ipotesi di lavoro: <strong>+25%</strong> di appuntamenti utili grazie alla
+            qualifica e <strong>+8 punti</strong> di tasso di chiusura grazie alla formazione della rete vendita.
+            È uno strumento per ragionare sugli ordini di grandezza, non una previsione di risultato.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────── VOCI ── -->
+  <section class="band band--inverse" id="risultati">
+    <div class="shell">
+      <div class="band__head">
+        <p class="mono-tag">Le voci</p>
+        <h2 class="band__title">Cosa dicono gli imprenditori<br>che hanno smesso di improvvisare.</h2>
+      </div>
+
+      <div class="quotes">
+        <figure class="quote">
+          <blockquote>Prima misuravo solo il fatturato a fine mese. Adesso so quanti contatti servono per chiudere un contratto e posso decidere quanto investire senza tirare a indovinare.</blockquote>
+          <figcaption><span class="quote__who">Titolare</span><span class="quote__what">Azienda di impiantistica &middot; Lombardia</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>Il cambiamento vero è stato sui commerciali: sono entrati due venditori nuovi e in sei settimane lavoravano come chi era in azienda da anni, perché hanno trovato un metodo già scritto.</blockquote>
+          <figcaption><span class="quote__who">Direttore commerciale</span><span class="quote__what">Servizi B2B &middot; Emilia-Romagna</span></figcaption>
+        </figure>
+        <figure class="quote">
+          <blockquote>Avevo tre fornitori diversi che si rimpallavano le responsabilità. Averli sotto un unico tetto ha eliminato il problema alla radice: adesso c'è un solo numero da guardare.</blockquote>
+          <figcaption><span class="quote__who">Amministratore</span><span class="quote__what">Formazione professionale &middot; Veneto</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="fit">
+        <div class="fit__col">
+          <h3 class="fit__title"><span class="fit__sign fit__sign--yes" aria-hidden="true"></span>Lavoriamo bene con te se</h3>
+          <ul>
+            <li>Vendi un prodotto o un servizio ad alto valore, con una trattativa vera</li>
+            <li>Fatturi già e vuoi rendere ripetibile quello che oggi funziona a intermittenza</li>
+            <li>Sei disposto a far registrare e rivedere le chiamate del tuo team</li>
+            <li>Puoi investire in modo continuativo, non per un mese di prova</li>
+          </ul>
+        </div>
+        <div class="fit__col">
+          <h3 class="fit__title"><span class="fit__sign fit__sign--no" aria-hidden="true"></span>Non siamo la scelta giusta se</h3>
+          <ul>
+            <li>Cerchi contatti da rivendere, senza toccare il modo in cui vendi</li>
+            <li>Vuoi risultati in trenta giorni e senza cambiare nulla in azienda</li>
+            <li>Vendi solo prodotti a basso margine con acquisto d'impulso</li>
+            <li>Non hai nessuno che possa seguire il progetto internamente</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────── FAQ ── -->
+  <section class="band" id="faq">
+    <div class="shell shell--narrow">
+      <div class="band__head">
+        <p class="mono-tag">Domande</p>
+        <h2 class="band__title">Prima di prenotare.</h2>
+      </div>
+
+      <div class="faq">
+        <details class="qa">
+          <summary><span>Lavorate con qualsiasi settore?</span></summary>
+          <div class="qa__body"><p>No. Lavoriamo con aziende che vendono con una trattativa: impiantistica, servizi B2B, formazione, consulenza, immobiliare, sanità privata. Se il tuo cliente compra in autonomia da un carrello, il nostro lavoro non è quello che ti serve.</p></div>
+        </details>
+        <details class="qa">
+          <summary><span>Quanto costa?</span></summary>
+          <div class="qa__body"><p>Dipende da quanti reparti attiviamo e dal volume di lavoro. Il budget si compone di due voci separate: il nostro compenso e l'investimento pubblicitario, che resta interamente sui tuoi account. In call ti diamo la cifra esatta per il tuo caso, senza rinvii a un secondo appuntamento.</p></div>
+        </details>
+        <details class="qa">
+          <summary><span>Devo già avere dei commerciali?</span></summary>
+          <div class="qa__body"><p>No. Se non ce li hai, li selezioniamo noi. Se ce li hai, partiamo da loro: nella maggior parte dei casi il problema non sono le persone ma l'assenza di un metodo condiviso.</p></div>
+        </details>
+        <details class="qa">
+          <summary><span>Serve un'altra agenzia per le campagne?</span></summary>
+          <div class="qa__body"><p>No, ed è il punto. Advertising, marketing, selezione e formazione stanno nello stesso team: nessun rimpallo di responsabilità quando un numero non torna.</p></div>
+        </details>
+        <details class="qa">
+          <summary><span>Quanto tempo mi chiedete ogni settimana?</span></summary>
+          <div class="qa__body"><p>Circa due ore: una riunione di allineamento sui numeri e le decisioni che spettano solo a te. Il resto lo esegue il nostro team con le persone della tua azienda.</p></div>
+        </details>
+        <details class="qa">
+          <summary><span>Cosa succede dopo i sei mesi?</span></summary>
+          <div class="qa__body"><p>Il processo è documentato e le persone sono formate per mandarlo avanti da sole. Molti clienti restano per far crescere i volumi o aprire nuovi mercati, ma è una scelta, non una dipendenza.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ────────────────────────────────── CTA ── -->
+  <section class="close">
+    <div class="shell close__inner">
+      <p class="mono-tag">Passo successivo</p>
+      <h2 class="close__title">Parliamo dei tuoi numeri,<br>non del nostro metodo.</h2>
+      <p class="close__lead">
+        Trenta minuti in videochiamata. Guardiamo insieme come acquisisci clienti oggi e ti diciamo
+        dove sta la perdita più grande. Se non possiamo esserti utili, te lo diciamo nella stessa call.
+      </p>
+      <a class="btn btn--solid btn--lg" href="https://go.salesprocess.it/prenota-call">Prenota la call gratuita</a>
+      <p class="close__note">Nessun costo, nessun impegno, nessuna presentazione da 40 slide.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="shell foot__grid">
+    <div class="foot__brand">
+      <a class="wordmark wordmark--foot" href="#top">
+        <span class="wordmark__mark" aria-hidden="true"></span>
+        <span class="wordmark__text">Sales<span class="wordmark__thin">Process</span></span>
+      </a>
+      <p>Advertising, marketing, selezione e formazione della rete vendita in un'unica agenzia.</p>
+    </div>
+
+    <div class="foot__col">
+      <h2 class="foot__h">Sito</h2>
+      <ul>
+        <li><a href="#problema">Il problema</a></li>
+        <li><a href="#sistema">Il sistema</a></li>
+        <li><a href="#percorso">Percorso</a></li>
+        <li><a href="#numeri">Numeri</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="foot__col">
+      <h2 class="foot__h">Contatti</h2>
+      <ul>
+        <li><a href="https://go.salesprocess.it/prenota-call">Prenota una call</a></li>
+        <li><a href="mailto:info@salesprocess.it">info@salesprocess.it</a></li>
+        <li><a href="https://www.instagram.com/salesprocessit/">Instagram</a></li>
+        <li><a href="https://it.linkedin.com/company/insider-crew">LinkedIn</a></li>
+      </ul>
+    </div>
+
+    <div class="foot__col">
+      <h2 class="foot__h">Sedi</h2>
+      <address>
+        <span class="foot__addr-lab">Sede legale</span>
+        Piazza IV Novembre<br>Capiago Intimiano (CO)
+      </address>
+      <address>
+        <span class="foot__addr-lab">Uffici</span>
+        Via Marco d'Agrate 41<br>Milano (MI)
+      </address>
+    </div>
+  </div>
+
+  <div class="shell foot__bar">
+    <span>&copy; <span id="year">2026</span> Sales Process</span>
+    <span class="foot__legal"><a href="#">Privacy</a><a href="#">Cookie</a><a href="#">Note legali</a></span>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
+</html>
