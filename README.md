@@ -70,6 +70,16 @@ Le altre pagine seguono lo stesso criterio:
 La CTA *Candida la tua azienda* punta al quiz reale, i recapiti e i social alle
 URL originali; i link fra pagine sono locali.
 
+## Contesto di progetto
+
+`PRODUCT.md` alla radice raccoglie registro, pubblico, personalità del marchio,
+anti-riferimenti e principi. È il documento che guida ogni decisione visiva e va
+letto prima di modificare il design.
+
+Le skill di design stanno in `.claude/skills/`: `impeccable` definisce la
+procedura, `reference/brand.md` le regole del registro vetrina. Il lavoro sul
+sito le rispetta, in particolare i divieti espliciti elencati sotto.
+
 ## Scelte di progetto
 
 **Tipografia.** Red Hat Display, lo stesso font del sito attuale, ma
@@ -77,7 +87,9 @@ self-hosted in versione variabile: un solo file da 44 KB copre i pesi da 300 a
 900, senza chiamate a Google Fonts. I titoli usano il peso 900 con crenatura
 stretta; il contrasto tra i pesi è quello che dà ritmo alla pagina.
 
-**Colore.** Nero e bianco puri come nell'originale. L'arancio compare solo su:
+**Colore.** Nero e bianco puri come nell'originale. L'arancio di marca `#FF8200`
+resta tale sui fondi scuri (8,45:1), mentre sul bianco il testo piccolo usa
+`#A85100` (5,47:1): il colore originale si ferma a 2,49:1 e non passerebbe AA. L'arancio compare solo su:
 una parola dei titoli, i pulsanti d'azione, i numeri dei reparti al passaggio
 del mouse, le etichette di sezione e i dettagli del piè di pagina. Il filmato
 dell'hero è desaturato via CSS proprio per non introdurre altro colore.
@@ -86,11 +98,28 @@ dell'hero è desaturato via CSS proprio per non introdurre altro colore.
 i propri fondi sezione per sezione, perché l'alternanza nero/bianco è parte
 dell'identità e non una preferenza di lettura.
 
-**Movimento.** Quattro comportamenti, niente di più: apertura del titolo
-dell'hero riga per riga, comparsa dei blocchi allo scorrimento, scorrimento
-continuo dei loghi clienti, stati al passaggio del mouse. Tutto si disattiva
-con `prefers-reduced-motion`, e i video si fermano quando escono dallo schermo
-o quando la scheda passa in secondo piano.
+**Movimento.** Regola non negoziabile: **nessuna animazione nasconde il
+contenuto**. Ogni `@keyframes` ha solo un fotogramma iniziale e nessun
+`fill-mode`, quindi se l'animazione non parte — scheda in secondo piano,
+renderer headless, JS assente — resta lo stato finale, cioè la pagina leggibile.
+
+Gli arrivi in scena sono in CSS puro con `animation-timeline: view()`: nessun
+IntersectionObserver, e famiglie diverse entrano in modo diverso invece di
+ripetere la stessa dissolvenza ovunque. L'effetto principale è il rientro
+dell'hero: scorrendo, il filmato passa da pieno schermo a riquadro, guidato da
+`animation-timeline: scroll()`. Fra le pagine c'è una transizione con
+`@view-transition`. Tutto si disattiva con `prefers-reduced-motion`, e i video
+si fermano quando escono dallo schermo o quando la scheda passa in secondo piano.
+
+**Cosa è stato tolto, e perché.** Il registro vetrina vieta alcune scorciatoie
+che il sito usava:
+
+| Rimosso | Motivo |
+|---|---|
+| Etichetta maiuscola sopra ogni sezione (19 occorrenze) | Compare sul 55-95% delle pagine generate da AI: è impalcatura, non voce. Restano i titoli, che bastano. |
+| Numeri 01–04 su reparti e prodotti | I numeri si guadagnano il posto solo quando il contenuto **è** una sequenza. Quattro reparti paralleli non lo sono. I 10 comandamenti restano numerati perché lì il numero è contenuto. |
+| Hero a 168px, crenatura −0,045em | Sopra i 96px la pagina urla; sotto −0,04em le lettere si toccano. |
+| Comparse legate a una classe messa dal JS | Le transizioni non scattano a scheda nascosta: la sezione sarebbe arrivata bianca. |
 
 ## I video
 
@@ -157,6 +186,11 @@ trasformato in blob al caricamento; e viene incorporato solo il VP9/WebM
   nell'attributo `alt`. Vanno aggiunti per accessibilità e SEO.
 - **Analytics e banner cookie** — non presenti, da aggiungere secondo lo
   strumento in uso (il sito attuale usa iubenda).
+- **Verifica AA** — l'audit automatico su tutte e sei le pagine non riporta
+  problemi. L'unica segnalazione residua riguarda il testo "Menu" nella testata
+  trasparente: misurato sui pixel reali il contrasto è 18,85:1, quindi è un
+  falso positivo dello strumento, che risale al bianco della pagina invece che
+  al filmato scuro sottostante.
 
 ## Licenza dei font
 
