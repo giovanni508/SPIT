@@ -914,6 +914,104 @@ a { color: inherit; text-decoration: none; }
 }
 .job p { font-size: 0.9062rem; color: var(--grigio); }
 
+
+/* ── 6c. FOTOGRAFIA ───────────────────────────────────────────────────
+   Tutte le foto sono in bianco e nero: l'arancio resta una firma
+   dell'interfaccia e non compete con il colore delle immagini. — */
+
+.foto {
+  position: relative;
+  overflow: hidden;
+  background: var(--nero);
+}
+.foto img {
+  width: 100%;
+  height: clamp(320px, 62vh, 720px);
+  object-fit: cover;
+  object-position: center 42%;
+}
+.foto figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: clamp(1.5rem, 4vw, 3.5rem) var(--gutter);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82), rgba(0, 0, 0, 0));
+  color: var(--bianco);
+}
+.foto__testo {
+  width: 100%;
+  max-width: var(--shell);
+  margin-inline: auto;
+  font-size: clamp(1.1rem, 2vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  max-width: 32ch;
+}
+.foto__testo em { font-style: normal; color: var(--arancio); }
+
+/* la foto si allarga appena mentre scorre: l'inquadratura respira,
+   ma il movimento è legato allo scorrimento, non a un ciclo automatico */
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: view()) {
+    .foto img {
+      animation: respiro linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+    }
+    @keyframes respiro {
+      from { transform: scale(1.12); }
+      to   { transform: scale(1); }
+    }
+  }
+}
+
+/* — parete di ritratti — */
+.ritratti { background: var(--nero); padding-block: var(--band); color: var(--bianco); }
+.ritratti__head {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.ritratti__title {
+  font-size: var(--t-h2);
+  font-weight: 900;
+  line-height: 0.94;
+  letter-spacing: -0.038em;
+  text-transform: uppercase;
+  max-width: 16ch;
+}
+.ritratti__title em { font-style: normal; color: var(--arancio); }
+.ritratti__lead { color: var(--grigio-c); font-size: var(--t-lead); max-width: 54ch; }
+
+.ritratti__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2px;
+}
+.ritratti__grid img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  filter: brightness(0.86);
+  transition: filter 0.5s var(--ease), transform 0.6s var(--ease);
+}
+.ritratti__grid img:hover { filter: brightness(1.06); transform: scale(1.03); }
+
+/* — ritratto singolo affiancato al testo (i due fondatori) — */
+.prose__fig--tondo {
+  background: var(--nero);
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1;
+  max-width: 26rem;
+  margin-inline: auto;
+}
+.prose__fig--tondo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+
 /* ── 7. FOOTER ────────────────────────────────────────────────────── */
 
 .foot { background: var(--nero); color: var(--bianco); padding-top: var(--band); }
@@ -1091,6 +1189,10 @@ a { color: inherit; text-decoration: none; }
   .soft__fig, .prose__fig { order: -1; }
 }
 
+@media (max-width: 1080px) {
+  .ritratti__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 860px) {
   .head .btn--fill { display: none; }
   .goal__meta { grid-template-columns: 1fr; }
@@ -1098,6 +1200,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 620px) {
+  .ritratti__grid { grid-template-columns: repeat(2, 1fr); }
   .foot__cols { grid-template-columns: 1fr 1fr; }
   .mv { grid-template-columns: 1fr; }
   .hero { min-height: 92svh; padding-top: 7rem; }

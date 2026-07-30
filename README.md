@@ -32,6 +32,7 @@ assets/css/style.css       token, componenti, responsive
 assets/js/app.js           testata, menu, comparse, marquee, video
 assets/fonts/              Red Hat Display variabile (SIL OFL)
 assets/img/                logo, illustrazioni dei reparti, loghi clienti
+assets/img/foto/           fotografia di marca, gia' convertita in bianco e nero
 assets/video/              hero e sezione metodo, in più risoluzioni
 tools/build-singlefile.py  genera le versioni a file singolo
 dist/                      output del comando qui sopra
@@ -121,6 +122,33 @@ che il sito usava:
 | Hero a 168px, crenatura −0,045em | Sopra i 96px la pagina urla; sotto −0,04em le lettere si toccano. |
 | Comparse legate a una classe messa dal JS | Le transizioni non scattano a scheda nascosta: la sezione sarebbe arrivata bianca. |
 
+## La fotografia
+
+Le foto arrivano dalla libreria media del sito attuale, raggiungibile via
+`wp-json/wp/v2/media`: 15 ritratti del team su parete ocra, due foto di gruppo,
+la sala riunioni e i due fondatori ritagliati.
+
+Sono tutte **convertite in bianco e nero** in fase di preparazione, non via
+filtro CSS: il trattamento e' cosi' identico ovunque, i file pesano meno e
+l'arancio resta una firma dell'interfaccia invece di competere con il colore
+delle immagini. In totale 1,1 MB per 19 file.
+
+```bash
+ffmpeg -i originale.jpg \
+  -vf "crop=in_h*0.75:in_h,scale=560:746,format=gray,eq=contrast=1.12" \
+  -q:v 4 assets/img/foto/ritratto-1.jpg
+```
+
+Le fasce fotografiche a tutta larghezza hanno un'inquadratura che si allarga
+appena mentre scorrono, legata a `animation-timeline: view()`: e' movimento
+guidato dallo scorrimento, non un ciclo automatico.
+
+**I ritratti non sono associati ai nomi.** Il sito attuale non pubblica quella
+corrispondenza da nessuna parte, e attribuire un volto alla persona sbagliata
+sarebbe un errore su persone reali: la parete di ritratti resta senza didascalie
+e le schede con nome e ruolo restano tipografiche. Se mi passi l'abbinamento,
+le unisco.
+
 ## I video
 
 Il sito attuale serve come sfondo dell'hero un QuickTime da **183 MB**
@@ -175,8 +203,8 @@ trasformato in blob al caricamento; e viene incorporato solo il VP9/WebM
   *Carriera* (la pagina originale contiene solo il titolo di benvenuto) e le
   frasi di apertura sotto i titoli di *Prodotti*, *Team* ed *Eventi*. Da
   rivedere o sostituire.
-- **Foto del team** — la pagina originale non pubblica ritratti, quindi le 13
-  schede sono solo tipografiche. Se ci sono le foto, si inseriscono nelle card.
+- **Abbinamento ritratti/nomi** — i 15 ritratti sono in pagina come parete
+  fotografica, senza nomi. Servono le corrispondenze per portarli nelle schede.
 - **Posizioni aperte** — la pagina Carriera non ha annunci: vanno aggiunti quando
   ci sono, oppure va collegato il gestionale che usate.
 - **Logo** — l'unica versione disponibile online è un AVIF da 293×68 px,
