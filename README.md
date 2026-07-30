@@ -81,12 +81,32 @@ Le skill di design stanno in `.claude/skills/`: `impeccable` definisce la
 procedura, `reference/brand.md` le regole del registro vetrina. Il lavoro sul
 sito le rispetta, in particolare i divieti espliciti elencati sotto.
 
+## Il concetto
+
+**Il quadro di controllo.** L'azienda costruisce processi misurabili, per fasi:
+il sito ne prende la forma invece di essere una brochure. Due elementi lo
+tengono insieme e sono la firma riconoscibile del progetto:
+
+- **la guida verticale** a sinistra, con la barra di avanzamento reale legata
+  allo scorrimento e il nome della pagina in verticale. Su schermi stretti
+  diventa un filo in cima, perché la colonna ruberebbe larghezza al testo;
+- **il reticolo**, sei colonne appena percettibili che passano sotto ogni
+  sezione. Non decora: rende visibile che sotto le composizioni diverse c'è
+  un sistema.
+
 ## Scelte di progetto
 
 **Tipografia.** Red Hat Display, lo stesso font del sito attuale, ma
 self-hosted in versione variabile: un solo file da 44 KB copre i pesi da 300 a
-900, senza chiamate a Google Fonts. I titoli usano il peso 900 con crenatura
-stretta; il contrasto tra i pesi è quello che dà ritmo alla pagina.
+900, senza chiamate a Google Fonts.
+
+I titoli **non sono più in maiuscolo pesante**: il maiuscolo urlato ovunque è
+volume, non autorevolezza, e contraddiceva la personalità premium e sobria
+scelta per il marchio. Ora sono in tondo di peso leggero, e una sola parola per
+titolo prende il peso massimo in arancio. La gerarchia la fa il contrasto fra i
+pesi, non il volume — ed è anche il motivo per cui il testo italiano riprende le
+sue maiuscole vere (Fatturato, Cliente-Target), che il maiuscolo forzato
+cancellava.
 
 **Colore.** Nero e bianco puri come nell'originale. L'arancio di marca `#FF8200`
 resta tale sui fondi scuri (8,45:1), mentre sul bianco il testo piccolo usa

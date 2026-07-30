@@ -250,7 +250,6 @@ a { color: inherit; text-decoration: none; }
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 1;
-  text-transform: uppercase;
 }
 .menu__foot {
   display: flex;
@@ -313,13 +312,12 @@ a { color: inherit; text-decoration: none; }
 
 .hero__title {
   font-size: var(--t-hero);
-  font-weight: 900;
+  font-weight: 500;
   line-height: 0.86;
   letter-spacing: -0.038em;
-  text-transform: uppercase;
   margin: 0;
 }
-.hero__title em { font-style: normal; color: var(--arancio); }
+.hero__title em { font-style: normal; font-weight: 900; color: var(--arancio); }
 /* il padding fa spazio all'accento di PIÙ: con line-height 0.86
    l'overflow:hidden della maschera lo taglierebbe via */
 .hero__title .line {
@@ -416,13 +414,12 @@ a { color: inherit; text-decoration: none; }
 .dept__head { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; margin-bottom: clamp(3.5rem, 7vw, 7rem); }
 .dept__title {
   font-size: var(--t-h2);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.94;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
   max-width: 16ch;
 }
-.dept__title em { font-style: normal; color: var(--arancio); }
+.dept__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .dept__lead { max-width: 56ch; color: var(--grigio); font-size: var(--t-lead); }
 
 
@@ -465,10 +462,9 @@ a { color: inherit; text-decoration: none; }
 .passo:last-child { border-bottom: 0; }
 .passo__t {
   font-size: clamp(1.75rem, 3.4vw, 3rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: -0.035em;
-  text-transform: uppercase;
 }
 .passo__d { max-width: 46ch; color: var(--grigio); font-size: 1.0625rem; }
 
@@ -514,12 +510,11 @@ a { color: inherit; text-decoration: none; }
 .goal__inner { display: flex; flex-direction: column; gap: clamp(1.5rem, 3vw, 2.5rem); align-items: flex-start; }
 .goal__title {
   font-size: clamp(2.4rem, 7.5vw, 6.5rem);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.9;
   letter-spacing: -0.038em;
-  text-transform: uppercase;
 }
-.goal__title em { font-style: normal; color: var(--arancio); }
+.goal__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .goal__meta {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -551,10 +546,9 @@ a { color: inherit; text-decoration: none; }
 .voices__head { display: flex; flex-direction: column; align-items: flex-start; gap: 1.25rem; margin-bottom: clamp(2.5rem, 5vw, 4.5rem); }
 .voices__title {
   font-size: var(--t-h2);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.94;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
   max-width: 14ch;
 }
 .voices__lead { color: var(--grigio); font-size: var(--t-lead); max-width: 58ch; }
@@ -629,13 +623,12 @@ a { color: inherit; text-decoration: none; }
 .method__inner { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: clamp(1.75rem, 3vw, 2.75rem); }
 .method__title {
   font-size: clamp(1.9rem, 4.6vw, 4rem);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 1.02;
   letter-spacing: -0.035em;
-  text-transform: uppercase;
   max-width: 22ch;
 }
-.method__title em { font-style: normal; color: var(--arancio); }
+.method__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .method__note { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.6); }
 
 /* — team — */
@@ -643,10 +636,9 @@ a { color: inherit; text-decoration: none; }
 .team__inner { display: flex; flex-direction: column; align-items: flex-start; gap: clamp(1.5rem, 3vw, 2.25rem); }
 .team__title {
   font-size: clamp(1.9rem, 4.4vw, 3.75rem);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.98;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
 }
 .team__cols {
   display: grid;
@@ -689,14 +681,13 @@ a { color: inherit; text-decoration: none; }
 }
 .phero__title {
   font-size: clamp(2.2rem, 6vw, 5rem);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.9;
   letter-spacing: -0.038em;
-  text-transform: uppercase;
   padding-top: 0.1em;
   max-width: 20ch;
 }
-.phero__title em { font-style: normal; color: var(--arancio); }
+.phero__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .phero__lead { max-width: 52ch; color: rgba(255, 255, 255, 0.84); font-size: var(--t-lead); }
 
 /* — blocchi di testo — */
@@ -709,13 +700,12 @@ a { color: inherit; text-decoration: none; }
 }
 .prose__title {
   font-size: var(--t-h2);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.94;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
   max-width: 16ch;
 }
-.prose__title em { font-style: normal; color: var(--arancio); }
+.prose__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .prose__body { display: flex; flex-direction: column; align-items: flex-start; gap: 1.35rem; color: var(--grigio); font-size: var(--t-lead); }
 .prose__body strong { color: var(--nero); font-weight: 700; }
 .prose__fig { margin: 0; }
@@ -750,13 +740,12 @@ a { color: inherit; text-decoration: none; }
 .cmds__head { display: flex; flex-direction: column; align-items: flex-start; gap: 1.1rem; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
 .cmds__title {
   font-size: var(--t-h2);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.94;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
   max-width: 18ch;
 }
-.cmds__title em { font-style: normal; color: var(--arancio); }
+.cmds__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .cmds__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -781,10 +770,9 @@ a { color: inherit; text-decoration: none; }
 }
 .cmd__t {
   font-size: clamp(1.1rem, 1.7vw, 1.35rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.025em;
-  text-transform: uppercase;
 }
 .cmd__d { font-size: 0.9375rem; color: var(--grigio-c); }
 
@@ -798,10 +786,9 @@ a { color: inherit; text-decoration: none; }
 .pillar { box-shadow: 0 0 0 1px var(--fumo); background: var(--bianco); padding: clamp(1.6rem, 2.6vw, 2.4rem); display: flex; flex-direction: column; gap: 0.9rem; }
 .pillar__t {
   font-size: clamp(1.2rem, 1.9vw, 1.5rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
 }
 .pillar p { color: var(--grigio); font-size: 0.9688rem; }
 
@@ -820,10 +807,9 @@ a { color: inherit; text-decoration: none; }
 .prod__body { display: flex; flex-direction: column; align-items: flex-start; gap: 1.1rem; }
 .prod__t {
   font-size: clamp(1.75rem, 3.2vw, 2.75rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: -0.035em;
-  text-transform: uppercase;
 }
 .prod__d { max-width: 54ch; color: var(--grigio); font-size: 1.0625rem; }
 .prod__fig { margin: 0; overflow: hidden; }
@@ -846,12 +832,11 @@ a { color: inherit; text-decoration: none; }
 .soft__body { display: flex; flex-direction: column; align-items: flex-start; gap: 1.35rem; }
 .soft__title {
   font-size: clamp(1.9rem, 4.4vw, 3.5rem);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.96;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
 }
-.soft__title em { font-style: normal; color: var(--arancio); }
+.soft__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .soft__lead { color: var(--grigio-c); font-size: var(--t-lead); max-width: 48ch; }
 .soft__list { display: flex; flex-direction: column; width: 100%; border-top: 1px solid rgba(255,255,255,0.16); }
 .soft__list li {
@@ -895,7 +880,7 @@ a { color: inherit; text-decoration: none; }
 .persona:hover { background: var(--nebbia); padding-left: clamp(0.5rem, 1.5vw, 1.5rem); }
 .persona__nome {
   font-size: clamp(1.6rem, 3.2vw, 2.75rem);
-  font-weight: 800;
+  font-weight: 500;
   line-height: 1;
   letter-spacing: -0.038em;
   grid-row: 1;
@@ -953,7 +938,6 @@ a { color: inherit; text-decoration: none; }
   font-weight: 900;
   line-height: 0.98;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
 }
 .event__when {
   display: flex;
@@ -978,9 +962,8 @@ a { color: inherit; text-decoration: none; }
 .job { box-shadow: 0 0 0 1px var(--fumo); background: var(--bianco); padding: clamp(1.4rem, 2.4vw, 2rem); display: flex; flex-direction: column; gap: 0.6rem; }
 .job__t {
   font-size: clamp(1.05rem, 1.7vw, 1.3rem);
-  font-weight: 800;
+  font-weight: 500;
   letter-spacing: -0.03em;
-  text-transform: uppercase;
 }
 .job p { font-size: 0.9062rem; color: var(--grigio); }
 
@@ -1048,13 +1031,12 @@ a { color: inherit; text-decoration: none; }
 }
 .ritratti__title {
   font-size: var(--t-h2);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.94;
   letter-spacing: -0.038em;
-  text-transform: uppercase;
   max-width: 16ch;
 }
-.ritratti__title em { font-style: normal; color: var(--arancio); }
+.ritratti__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .ritratti__lead { color: var(--grigio-c); font-size: var(--t-lead); max-width: 54ch; }
 
 .ritratti__grid {
@@ -1082,6 +1064,145 @@ a { color: inherit; text-decoration: none; }
 }
 .prose__fig--tondo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
 
+
+/* ═══════════════════════════════════════════════════════════════════════
+   IL QUADRO DI CONTROLLO
+   Questa azienda costruisce processi misurabili, per fasi. Il sito ne
+   prende la forma: una guida verticale che dice sempre a che punto sei,
+   e una griglia tecnica che passa sotto ogni sezione tenendole insieme
+   anche quando la composizione cambia.
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* — la griglia: colonne appena percettibili, il foglio su cui e' disegnato
+     tutto il resto. Non decora: rende visibile che c'e' un sistema. — */
+.reticolo {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(100vw, var(--shell));
+  padding-inline: var(--gutter);
+  z-index: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.055) 0 1px,
+    transparent 1px calc(100% / 6)
+  );
+  background-clip: content-box;
+}
+
+/* — la guida: barra di avanzamento reale, legata allo scorrimento, piu' il
+     nome della pagina in verticale. Su schermi stretti diventa un filo in
+     cima, perche' la colonna ruberebbe larghezza al testo. — */
+.guida {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4.5rem;
+  z-index: 70;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.25rem;
+  padding-block: 7rem 2rem;
+  pointer-events: none;
+}
+.guida__barra {
+  position: relative;
+  width: 1px;
+  flex: 1;
+  background: rgba(128, 128, 128, 0.32);
+}
+.guida__barra::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 100%;
+  background: var(--arancio);
+  transform: scaleY(0);
+  transform-origin: top;
+}
+.guida__nome {
+  writing-mode: vertical-rl;
+  mix-blend-mode: difference;
+  color: #fff;
+  font-size: 0.625rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    .guida__barra::after {
+      animation: avanzamento linear both;
+      animation-timeline: scroll(root);
+    }
+    @keyframes avanzamento { to { transform: scaleY(1); } }
+  }
+}
+
+/* lo spazio a sinistra e' della guida, non del contenuto */
+@media (min-width: 1081px) {
+  .shell { padding-left: calc(var(--gutter) + 4.5rem); }
+  .head__bar { padding-left: calc(var(--gutter) + 4.5rem); }
+  .foto figcaption { padding-left: calc(var(--gutter) + 4.5rem); }
+}
+
+@media (max-width: 1080px) {
+  .guida {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: auto;
+    height: 2px;
+    flex-direction: row;
+    padding: 0;
+  }
+  .guida__nome { display: none; }
+  .guida__barra { width: 100%; height: 2px; flex: 1; }
+  .guida__barra::after { inset: 0 auto 0 0; width: 100%; height: 100%; transform: scaleX(0); transform-origin: left; }
+  .reticolo { display: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    @media (max-width: 1080px) {
+      @keyframes avanzamento { to { transform: scaleX(1); } }
+    }
+  }
+}
+
+/* — le sezioni non partono piu' tutte dal margine sinistro: il titolo
+     rientra nella griglia e il testo di accompagnamento sta a fianco,
+     non sotto. Composizione asimmetrica invece di blocchi impilati. — */
+.dept__head,
+.voices__head,
+.cmds__head,
+.ritratti__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 5rem);
+  align-items: end;
+}
+.dept__head > :first-child,
+.voices__head > :first-child,
+.cmds__head > :first-child,
+.ritratti__head > :first-child { grid-column: 1; }
+.dept__lead, .voices__lead, .ritratti__lead { grid-column: 2; padding-bottom: 0.5rem; }
+
+@media (max-width: 860px) {
+  .dept__head, .voices__head, .cmds__head, .ritratti__head { grid-template-columns: 1fr; }
+  .dept__lead, .voices__lead, .ritratti__lead { grid-column: 1; }
+}
+
+/* il contenuto sta sopra il reticolo */
+.head, .menu, main, .foot { position: relative; z-index: 1; }
+
 /* ── 7. FOOTER ────────────────────────────────────────────────────── */
 
 .foot { background: var(--nero); color: var(--bianco); padding-top: var(--band); }
@@ -1094,12 +1215,11 @@ a { color: inherit; text-decoration: none; }
 .foot__pitch { display: flex; flex-direction: column; align-items: flex-start; gap: 1.5rem; }
 .foot__title {
   font-size: clamp(2rem, 4.6vw, 3.75rem);
-  font-weight: 900;
+  font-weight: 400;
   line-height: 0.94;
   letter-spacing: -0.04em;
-  text-transform: uppercase;
 }
-.foot__title em { font-style: normal; color: var(--arancio); }
+.foot__title em { font-style: normal; font-weight: 800; color: var(--arancio); }
 .foot__txt { color: var(--grigio-c); max-width: 48ch; }
 
 .foot__cols { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.5rem, 3vw, 2.5rem); align-content: start; }
