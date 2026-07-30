@@ -91,3 +91,51 @@ WCAG 2.1 AA completo, senza eccezioni estetiche.
   migliorano uno stato già leggibile.
 - Lingua dichiarata, struttura dei titoli coerente, testi alternativi sulle
   immagini che portano informazione.
+
+
+## Verdetto sul primo impianto (da leggere prima di rifare)
+
+Il cliente ha giudicato il risultato **"poco creativo"** sull'hero e
+**"poco wow"** sulle animazioni. Non ha indicato difetti puntuali: e' un
+verdetto sulla direzione, e va preso come tale.
+
+**Cosa e' andato storto.** La personalita' scelta e' premium e sobria, e io
+l'ho tradotta in *sicuro*. Il registro vetrina lo vieta esplicitamente:
+"la sobrieta' senza intenzione legge come mediocre, non come raffinata; le
+superfici di marca hanno bisogno di un punto di vista e della disponibilita'
+a rischiare la stranezza. Go big or go home." E ancora, fra i divieti:
+"palette timide e impaginazioni medie. Sicuro = invisibile."
+
+Sobrio non vuol dire timido. Il riferimento giusto non e' un sito
+istituzionale che non disturba: e' una marca che decide qualcosa e la porta
+fino in fondo.
+
+**Cosa NON rifare com'era**
+
+- Hero con filmato desaturato piu' velo nero e una parola arancione. E'
+  corretto e non lo ricorda nessuno. Il filmato dell'evento di Misano e'
+  materiale forte: va usato come materiale, non come sfondo attenuato.
+- Movimento tutto della stessa famiglia: rientro dell'inquadratura, arrivi
+  in scena, nastro che avanza. Sono tutti spostamenti misurati. Manca un
+  momento che sorprenda: uno solo, orchestrato, invece di cinque discreti.
+- Alternanza nero/bianco a fasce per l'intera lunghezza del sito. Regge il
+  ritmo ma non costruisce nessun mondo visivo.
+
+**Da dove ripartire**
+
+Prima di scrivere codice: nominare la corsia estetica e il riferimento
+reale, come impone `brand.md`. Poi la prova inversa: descrivere il sito che
+si sta per costruire come lo descriverebbe un concorrente. Se la frase vale
+per la landing media di categoria, si ricomincia.
+
+La strategia di colore va scelta esplicitamente fra restrained, committed,
+full palette e drenched. Il primo impianto era restrained per riflesso,
+mai per decisione: e' l'origine del "poco creativo".
+
+**Vincoli che restano validi e non vanno rimessi in discussione**
+
+- Testi e struttura dell'originale, gia' verificati.
+- Red Hat Display, font del marchio.
+- WCAG AA completo.
+- I ritratti del team restano senza nome finche' non arriva la
+  corrispondenza dal cliente.
