@@ -51,7 +51,7 @@ lettera:
 |---|---|
 | Hero | *Più clienti / Più fatturato* + *"Uniamo la forza del Marketing a risposta diretta…"*, con il video di sfondo dell'evento di Misano |
 | Loghi clienti | le 24 aziende presenti sul sito, in scorrimento continuo |
-| 4 Reparti | *4 Reparti costantemente allineati* — Pubblicità, Marketing a Risposta Diretta, Reclutamento, Formazione, con le illustrazioni originali |
+| 4 Reparti | *4 Reparti costantemente allineati* — Pubblicità, Marketing a Risposta Diretta, Reclutamento, Formazione, presentati come sequenza: l'immagine resta ferma e cambia mentre il testo scorre |
 | Obiettivo | *Un unico obiettivo comune — Aumentare il fatturato della tua azienda* |
 | Testimonianze | *Cosa dicono i nostri clienti* + *"Risultati concreti, non promesse…"* e i cinque nomi presenti sul sito |
 | Metodo | *Incrementa i Profitti della tua Azienda grazie al METODO "4 in 1"* |
@@ -112,6 +112,13 @@ dell'hero: scorrendo, il filmato passa da pieno schermo a riquadro, guidato da
 `@view-transition`. Tutto si disattiva con `prefers-reduced-motion`, e i video
 si fermano quando escono dallo schermo o quando la scheda passa in secondo piano.
 
+**Composizione.** Nessuna sezione ripete l'impaginazione della precedente:
+sequenza a scorrimento per i reparti, griglia irregolare per i comandamenti,
+elenco editoriale per le persone, parete fotografica per i ritratti, fasce a
+tutta larghezza fra un blocco e l'altro. Le griglie di schede identiche ripetute
+all'infinito sono un divieto esplicito del registro, e il sito ne aveva tre: dieci
+comandamenti uguali, tredici schede team uguali, quattro righe reparto uguali.
+
 **Cosa è stato tolto, e perché.** Il registro vetrina vieta alcune scorciatoie
 che il sito usava:
 
@@ -121,6 +128,9 @@ che il sito usava:
 | Numeri 01–04 su reparti e prodotti | I numeri si guadagnano il posto solo quando il contenuto **è** una sequenza. Quattro reparti paralleli non lo sono. I 10 comandamenti restano numerati perché lì il numero è contenuto. |
 | Hero a 168px, crenatura −0,045em | Sopra i 96px la pagina urla; sotto −0,04em le lettere si toccano. |
 | Comparse legate a una classe messa dal JS | Le transizioni non scattano a scheda nascosta: la sezione sarebbe arrivata bianca. |
+| Quattro righe reparto identiche | Diventate una sequenza: il nastro di immagini sosta su ogni fotogramma, sincronizzato col testo che scorre a fianco. |
+| Dieci schede comandamento identiche | Tre principi cardine occupano il doppio dello spazio: la griglia dice quali reggono gli altri. |
+| Tredici schede team identiche | Diventate un elenco editoriale: il nome porta il peso, la biografia sta a fianco con la misura giusta. |
 
 ## La fotografia
 
